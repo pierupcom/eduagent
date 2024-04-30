@@ -1,0 +1,28 @@
+If a learner wants to use your open-source project, they would need to make changes primarily in the newEnvQuestions.js file. This file contains the questions that are asked when creating a new .env file for the project.
+
+Here are the specific parts they would need to modify:
+
+OpenAI API Key:
+The question prompts the user to enter their OpenAI API key.
+Students would need to sign up for an OpenAI account and obtain their own API key to use the project.
+They should replace the placeholder API key or enter their own API key when prompted.
+
+
+SERP API Key:
+The question asks for the SERP API key, which is used for web search functionality.
+If the student wants to enable web search, they would need to sign up for a SERP API account at https://serper.dev/ and obtain their own API key.
+They should enter their SERP API key when prompted or leave it empty to disable web search.
+
+
+Replicate API Key:
+The question asks for the Replicate API key, which is used for image generation.
+If the student wants to use Replicate for image generation, they would need to sign up for a Replicate account at https://replicate.com/ and obtain their own API key.
+They should enter their Replicate API key when prompted or leave it empty to use only DALL-E for image generation.
+
+Additionally, if a learner chooses to run the project manually instead of using Docker Compose, they would need to follow the instructions provided in the index.js file:
+
+Navigate to the ./next folder and run npm install && npm run dev to set up and start the Next.js development server.
+Navigate to the ./platform folder and run poetry install && poetry run python -m reworkd_platform to set up and start the backend platform.
+Ensure that the MySQL database configuration in the generated .env file matches their local setup.
+
+Clear instructions in the project's README.md file on how to set up and run the project, including the steps mentioned above. This will guide students through the process of configuring the necessary API keys and running the project successfully.
