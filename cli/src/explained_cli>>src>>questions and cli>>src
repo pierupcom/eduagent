@@ -1,0 +1,49 @@
+Each file in the `cli/src` directory and their purpose:
+
+1. `envGenerator.js`:
+   - This file contains functions for generating the environment (`.env`) files based on the user's input.
+   - It defines the structure of the environment variables for different sections like Deployment Environment, NextJS, Next Auth config, etc.
+   - It generates the content of the `.env` file by combining the section names and their respective variables.
+   - It also includes functions to check if the `.env` file exists and to test the existing `.env` file for missing or extra keys.
+
+2. `helpers.js`:
+   - This file contains utility functions used throughout the CLI.
+   - It includes functions for printing the title using ASCII art (with the `figlet` library) and validating API keys based on a given pattern.
+
+3. `index.js`:
+   - This file serves as the entry point of the CLI.
+   - It imports necessary dependencies and functions from other files.
+   - It prompts the user with questions based on whether an existing `.env` file is found or not.
+   - If an existing `.env` file is found, it validates the file and prompts the user with questions from `existingEnvQuestions.js`.
+   - If no `.env` file is found, it prompts the user with questions from `newEnvQuestions.js`.
+   - Based on the user's answers, it generates the `.env` files using the `generateEnv` function from `envGenerator.js`.
+   - It also handles the run option selected by the user (Docker Compose or manual) and provides instructions accordingly.
+
+4. `questions` directory:
+   - This directory contains files related to the questions asked by the CLI.
+
+   - `existingEnvQuestions.js`:
+     - This file contains a single question asking the user how they want to run AgentGPT (Docker Compose or manual) when an existing `.env` file is found.
+
+   - `newEnvQuestions.js`:
+     - This file contains questions asked when creating a new `.env` file.
+     - It includes questions for the OpenAI API key, SERP API key, and Replicate API key.
+     - It validates the entered API keys by making requests to the respective API endpoints.
+
+   - `sharedQuestions.js`:
+     - This file contains a shared question used in both `existingEnvQuestions.js` and `newEnvQuestions.js`.
+     - It asks the user how they want to run AgentGPT (Docker Compose or manual).
+
+5. `.gitignore`:
+   - This file specifies the files and directories that should be ignored by Git version control.
+
+6. `README.md`:
+   - This file serves as the documentation for the CLI, providing instructions and information about the project.
+
+7. `package-lock.json` and `package.json`:
+   - These files are related to the Node.js package management and contain the project's dependencies and scripts.
+
+8. `tsconfig.json`:
+   - This file is the configuration file for TypeScript, specifying the compiler options for the project.
+
+These files work together to provide a CLI experience for generating the necessary `.env` files for the AgentGPT project based on the user's input and preferences.
