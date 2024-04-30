@@ -1,0 +1,31 @@
+This workflow file named `Generate Sponsors README` is a configuration file that automates the process of updating the sponsors section in the project's README file.
+
+The workflow is triggered in two ways:
+1. Manually, using the `workflow_dispatch` event.
+2. Automatically, on a daily schedule using the `schedule` event with a cron expression (`0 0 *`).
+
+The workflow consists of a single job named `deploy`, which runs on the latest version of Ubuntu.
+
+The job includes the following steps:
+
+1. `Checkout 🛎️`:
+   - Uses the `actions/checkout@v2` action to check out the repository code.
+
+2. `Generate Sponsors`:
+   - Uses the `JamesIves/github-sponsors-readme-action@v1.2.2` action to generate the sponsors section in the README file.
+   - The `token` input is set to the `SPONSOR_WORKFLOW_PAT` secret, which should contain a personal access token with the necessary permissions.
+   - The `file` input specifies the path to the README file (`README.md`).
+   - The `minimum` input sets the minimum sponsorship amount to include in the README (1399).
+
+3. `Create Pull Request`:
+   - Uses the `peter-evans/create-pull-request@v5.0.1` action to create a pull request with the updated sponsors section.
+   - The `token` input is set to the `SPONSOR_WORKFLOW_PAT` secret.
+   - The `branch` input specifies the branch name for the pull request (`workflow/sponsors`).
+   - The `title`, `commit-message`, and `body` inputs define the title, commit message, and body of the pull request, respectively.
+   - The `labels` input adds the "documentation" label to the pull request.
+
+The purpose of this workflow is to automate the process of updating the sponsors section in the README file. It uses the `github-sponsors-readme-action` to generate the sponsors section based on the project's sponsors on GitHub. The action fetches the sponsors who have contributed a minimum of 1399 (units not specified) and updates the README file accordingly.
+
+After generating the updated sponsors section, the workflow creates a pull request with the changes. This allows for easy review and integration of the updated sponsors section into the main branch of the repository.
+
+By automating this process, the workflow ensures that the sponsors section in the README file stays up to date, acknowledging and appreciating the project's sponsors without manual intervention.
