@@ -1,0 +1,98 @@
+Files in the `docs/essentials` folder:
+
+1. FAQ.mdx:
+   Description:
+   - This file contains frequently asked questions and answers about AgentGPT.
+   - It covers topics such as agent issues, capabilities, limitations, and miscellaneous questions.
+   - It provides information on the differences between AgentGPT, ChatGPT, and AutoGPT.
+   - It also addresses local contribution issues and directs users to the setup guide and GitHub issues for troubleshooting.
+
+   Changes for Your Use:
+   - Update the FAQ content based on the most common questions asked by your users.
+   - Add new questions and answers as they arise, ensuring the information is accurate and up to date.
+   - Customize the links and references to point to the relevant sections of your documentation or external resources.
+
+   Updates:
+   - Regularly review and update the FAQ based on user feedback and new developments in the project.
+   - Consider categorizing the questions into different sections for better organization and readability.
+
+   README.md Considerations:
+   - Include a link to the FAQ section in the README.md file to direct users to common questions and answers.
+   - Highlight any important or frequently referenced questions from the FAQ in the README.md file.
+
+2. contributing.mdx:
+   Description:
+   - This file provides guidelines and information on how to contribute to the AgentGPT project.
+   - It outlines various ways to contribute, including development, design, documentation, testing, sharing ideas, and spreading the word.
+   - It emphasizes the importance of community contributions and welcomes individuals from all backgrounds and expertise levels.
+   - It mentions that detailed instructions on how to contribute will be added soon.
+
+   Changes for Your Use:
+   - Customize the contribution guidelines based on your project's specific needs and preferences.
+   - Update the instructions on how to contribute once they are available, providing clear steps and requirements.
+   - Include any specific guidelines or conventions that contributors should follow when submitting code, issues, or pull requests.
+
+   Updates:
+   - Regularly review and update the contributing guidelines to ensure they are accurate and reflect the current state of the project.
+   - Add links to relevant resources, such as coding standards, issue templates, or code of conduct.
+
+   README.md Considerations:
+   - Include a prominent section in the README.md file encouraging users to contribute to the project.
+   - Provide a link to the contributing.mdx file for detailed guidelines on how to get involved.
+   - Highlight any specific areas or skills where contributions are particularly welcome or needed.
+
+3. roadmap.mdx:
+   Description:
+   - This file presents the roadmap for AgentGPT, outlining completed features, planned features, and future updates.
+   - It provides an overview of the current state of the project and the upcoming developments.
+   - It includes completed features such as user authentication, language support, customizable API keys, documentation updates, and more.
+   - It also lists planned features and updates that are in the pipeline.
+
+   Changes for Your Use:
+   - Update the roadmap based on your project's specific goals, priorities, and timeline.
+   - Customize the completed and planned features to align with your project's scope and objectives.
+   - Add or remove features as necessary to reflect the current state and future direction of your project.
+
+   Updates:
+   - Regularly review and update the roadmap to keep it accurate and up to date with the project's progress.
+   - Communicate any changes or delays in the roadmap to the community to set expectations and maintain transparency.
+
+   README.md Considerations:
+   - Include a brief overview of the project's roadmap in the README.md file, highlighting key completed and upcoming features.
+   - Provide a link to the detailed roadmap (roadmap.mdx) for users who want to explore the project's plans in depth.
+   - Encourage users to provide feedback and suggestions for the roadmap, fostering community engagement and collaboration.
+
+4. usecases.mdx:
+   Description:
+   - This file showcases various use cases for AgentGPT, demonstrating its versatility and potential applications.
+   - It highlights scenarios such as code assistance, research and content generation, email and communication, marketing and advertising, and budgeting and financial planning.
+   - It emphasizes the wide range of domains where AgentGPT can be beneficial, from education to healthcare, business to entertainment.
+   - It encourages users to contribute their own innovative use cases and ideas to shape the future of AgentGPT.
+
+   Changes for Your Use:
+   - Customize the use cases based on your project's specific capabilities and target audience.
+   - Add or remove use cases to align with your project's strengths and focus areas.
+   - Provide concrete examples or case studies to illustrate how AgentGPT can be applied in each use case.
+
+   Updates:
+   - Regularly review and update the use cases based on user feedback, real-world applications, and emerging trends.
+   - Encourage users to share their own use cases and experiences, and consider featuring them in the documentation.
+
+   README.md Considerations:
+   - Include a brief overview of the key use cases for AgentGPT in the README.md file to showcase its potential applications.
+   - Provide a link to the detailed use cases documentation (usecases.mdx) for users who want to explore more possibilities.
+   - Highlight any particularly noteworthy or impactful use cases that demonstrate the value and capabilities of AgentGPT.
+
+By providing comprehensive and up-to-date documentation in the `docs/essentials` folder, you can help users understand the frequently asked questions, contribute to the project effectively, stay informed about the project's roadmap, and discover the various use cases for AgentGPT. Make sure to keep the documentation accurate, relevant, and engaging to foster a strong and active community around your project.
+
+
+
+
+
+
+
+
+
+
+
+Thank you...doing great junebug! lets keep going with the docs>>essentials folder>> inthis folder we have the FAQ.mdx the contributing.mdx the roadmap.mdx and the usecases.mdx starting with FAQ.mdx \\\\--- title: FAQ description: Get answers to the most frequently asked questions about AgentGPT icon: "question" \\\\--- Discover answers to the most frequently asked questions about AgentGPT. If your question isn't covered here, feel free to connect with our team on \\\\\\\[Discord\\\\\\\](https://discord.gg/jdSBAnmdnY) or \\\\\\\[GitHub\\\\\\\](https://github.com/reworkd/AgentGPT). \\\\## Agent issues At present, AgentGPT does not have the capability to generate outputs in this way. However, this is a feature we're actively developing. To keep updated on this, check out our \\\\\\\[roadmap\\\\\\\](/essentials/roadmap). Not yet! We're looking into implementing this functionality. To see when this might be available, take a look at our \\\\\\\[roadmap\\\\\\\](/essentials/roadmap). We guarantee that actions such as "sending an email" will only occur with your explicit permission. Due to limitations on API usage and infrastructure costs, there's a cap on how much the Agent can run. To circumvent this, consider hosting AgentGPT locally using your own API key. Alternatively, subscribing to our pro plan will allow for increased limits. More details can be found in our \\\\\\\[setup documentation\\\\\\\](/essentials/roadmap). Currently, each Agent run is independent, so resuming isn't possible. However, you can initiate another AgentGPT run using information from the previous run. We plan on adding this feature in the future. Stay updated via our \\\\\\\[roadmap\\\\\\\](/essentials/roadmap). Currently, free-tier users of AgentGPT utilize GPT-3.5, while PRO users have access to GPT-4. If you have API access to GPT-4, you can run AgentGPT locally using your API key. The output length is limited to manage generation costs on our end. If you're using your own API key, you can adjust the output length within the advanced settings by increasing the token count. If you're a Pro user or are a running AgentGPT locally, you can adjust the output length winthin the advanced settings \\\\## Misc While ChatGPT is designed to answer specific questions and maintain a conversation, AgentGPT is a platform where you can configure an AI agent to achieve a broad goal. Both AgentGPT and AutoGPT are autonomous AI agent projects. However, while AutoGPT runs locally, AgentGPT is a web-based platform. AgentGPT boasts a wide array of capabilities and we're always working to expand them. To see some of its applications, visit our \\\\\\\[usecases\\\\\\\](/essentials/usecases) page. Yes, AgentGPT does have internet access. \\\\## Local contribution issues For troubleshooting, refer to our \\\\\\\[setup guide\\\\\\\](/development/setup). If your issue persists, you're welcome to submit an \\\\\\\[issue on GitHub\\\\\\\](https://github.com/reworkd/AgentGPT/issues). contributing.mdx \\\\--- title: Contributing description: Learn how to contribute to AgentGPT and join our thriving open-source community. icon: "hands" \\\\--- \\\\# Contributing to AgentGPT AgentGPT is an open-source project that has grown and thrived thanks to the collective efforts of our vibrant community of contributors. We are thrilled to have you here and appreciate your interest in contributing to this exciting project! \\\\## Ways to Contribute There are numerous ways you can contribute to AgentGPT: \\\\### Development If you're a developer, your skills can be put to great use in improving AgentGPT's codebase. You can contribute by addressing open issues listed on our \\\\\\\[GitHub\\\\\\\](https://github.com/reworkd/AgentGPT), or even by suggesting new features. \\\\### Design Are you gifted with design skills? AgentGPT could use your expertise to make it even more user-friendly and visually appealing. \\\\### Documentation If you're adept at explaining things clearly, you can help us maintain and enhance the documentation. Clear and comprehensive documentation is invaluable, as it makes it easier for people to get started with AgentGPT and contribute to its development. \\\\### Testing If you've found a bug or issue, report it! Or better yet, help us fix it. Testing is a vital part of software development and helps ensure the quality and reliability of AgentGPT. \\\\### Share Your Ideas Do you have an innovative idea for improving AgentGPT? We're all ears! Our community is a hub for creativity and innovation, and we welcome fresh thoughts and perspectives. \\\\### Spread the Word If you're passionate about AgentGPT, consider sharing that passion with others. Write about us, speak about us, and help more people discover and contribute to AgentGPT. \\\\## How to Start Contributing This section will soon be updated with detailed instructions on how to contribute to AgentGPT. In the meantime, know that we welcome all individuals, regardless of expertise or background. Feel free to reach out to us on \\\\\\\[GitHub\\\\\\\](https://github.com/reworkd/AgentGPT) or \\\\\\\[Discord\\\\\\\](https://discord.gg/jdSBAnmdnY). \\\\## A Big Thank You! We sincerely appreciate your interest and contribution to AgentGPT. Together, we can take this project to new heights. Welcome to our community! roadmap.mdx \\\\--- title: "Roadmap" description: "See whats coming to AgentGPT in the future" icon: "road" \\\\--- AgentGPT is currently in beta, and we're excited to share what we have in store! This roadmap provides an overview of the features we're currently working on, as well as the ones we've already completed. Our developers are working tirelessly on these features. Typically, it might take a few days to 2 weeks to roll out these updates. To stay updated with our progress, check out our \\\\\\\[roadmap board on GitHub\\\\\\\](https://github.com/orgs/reworkd/projects/3). \\\\## Completed Features Sign in to save your agent runs in our database. We strive to make AgentGPT accessible to everyone. We're always looking to expand our language offerings, so your contributions are welcome! Use your own OpenAI API key to customize everything from the model to the temperature, loops, and more. All of this happens within your browser! We're always updating our documentation to help new users and contributors familiarize themselves with AgentGPT. Our basic version performs and summarizes Google searches via \\\\\\\[Serper.dev\\\\\\\](https://serper.dev). We're planning to support other SERP APIs and visit and parse websites in the future. We believe this migration will help us leverage the Python ecosystem's language model tools. This will help us cover infrastructure costs. \\\\## Planned Features \\\\## Notes We continually update our roadmap and add new features, so stay tuned for updates! Feel free to check out our GitHub for the latest. As a small team, we greatly appreciate the community's support in developing AgentGPT. If you're interested in contributing, please visit our \\\\\\\[contributing page\\\\\\\](/contributing). usecases.mdx \\\\--- title: Use Cases description: Discover a variety of exciting use cases for AgentGPT. icon: "lightbulb" \\\\--- The versatile and dynamic nature of AgentGPT allows it to be applied in a plethora of scenarios. This page will introduce you to the different use cases of AgentGPT and illustrate how it can be a game-changing tool in various fields. The potential use cases for AgentGPT are almost limitless. From education to healthcare, business to entertainment, AgentGPT can bring a new level of efficiency and automation. \\\\## Code Assistance AgentGPT can serve as a programming assistant, helping to debug code, generate code snippets, or even provide coding tutorials. \\\\## Research and Content Generation From crafting blog posts and writing articles, to compiling study guides and summaries, AgentGPT can streamline content creation across numerous domains. \\\\## Email and Communication Writing an email or crafting a perfect message can be time-consuming. With AgentGPT, you can automate this process. It can help generate emails, draft messages, and assist with other forms of communication. \\\\## Marketing and Advertising AgentGPT can be used to generate innovative marketing ideas, create compelling ad copy, and help with SEO strategies. \\\\## Budgeting and Financial Planning AgentGPT can provide budgeting advice, financial management tips, and even create personal financial plans based on user-defined criteria. If you have an interesting use case in mind, or if you'd like to contribute to the development of these features, we'd love to hear from you! Reach out to us on Discord. We welcome contributions on GitHub. Your innovative ideas and contributions can help shape the future of AgentGPT. For detailed guidelines on how to contribute to these usecases, check out our \\\\\\\[Contributing\\\\\\\](./contributing) page. OK away you go...you sahweet tool based supportive programming masterpiece!!
