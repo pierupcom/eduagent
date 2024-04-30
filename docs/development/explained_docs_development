@@ -1,0 +1,118 @@
+Here's the review of the files in the `docs/development` folder:
+
+1. auth.mdx:
+   Description:
+   - This file provides information about authentication in AgentGPT, specifically in development mode and with various providers.
+   - It explains how to switch between development and production environments using the `NODE_ENV` variable in the `.env` file.
+   - It also provides instructions on how to access provider secret keys for different OAuth authentication providers (Google, GitHub, Discord) and how to enable non-local authentication.
+
+   Changes for Your Use:
+   - Replace the placeholder values ("\*\*\*") for the client IDs and secrets with the actual values obtained from the respective providers.
+   - Update the `NEXTAUTH_URL` variable in the `.env` file to the URL where your application is hosted when switching from local authentication to OAuth authentication.
+
+   Updates:
+   - Keep the provider secret keys and client IDs secure and do not share them publicly.
+   - Regularly review and update the authentication configuration to ensure it aligns with the latest provider guidelines and security practices.
+
+2. memory.mdx:
+   Description:
+   - This file explains how AgentGPT manages memory using vector databases, specifically Weaviate.
+   - It discusses the challenges of memory management for AI agents operating for extended periods and the need for external memory storage.
+   - It provides an overview of vector databases and why Weaviate is chosen as the go-to solution for AgentGPT.
+   - It also mentions the current applications of long-term memory in AgentGPT and encourages contributions for further development.
+
+   Changes for Your Use:
+   - If you plan to use a different vector database, update the file to reflect the chosen database and its specific configuration instructions.
+   - Customize the memory management strategies and applications based on your project's requirements.
+
+   Updates:
+   - Keep the vector database documentation and usage instructions up to date as the project evolves.
+   - Document any new memory management techniques or applications implemented in the project.
+
+3. prompts.mdx:
+   Description:
+   - This file discusses the importance of prompts in guiding the behavior of AI agents and the models used in AgentGPT (`gpt-3.5-turbo` and `gpt-4`).
+   - It provides information about prompt templates and recommends resources for learning more about prompting.
+   - It introduces key terms related to prompting, such as "one shot," "two shot," "N shot," and "zero shot."
+   - It also explains the prompting techniques used in AgentGPT, including "Plan and Solve" and "ReAct."
+
+   Changes for Your Use:
+   - Customize the prompt templates and techniques based on your project's specific requirements and goals.
+   - Update the recommended resources and links to include any additional or updated prompting guides or tutorials.
+
+   Updates:
+   - Document any new prompting techniques or strategies implemented in the project.
+   - Keep the prompting documentation up to date with the latest best practices and findings in the field of AI prompting.
+
+4. setup.mdx:
+   Description:
+   - This file provides a step-by-step guide for setting up a local installation of AgentGPT using Docker (recommended) or without Docker.
+   - It lists the prerequisites required for the setup, including Git, Node.js, OpenAI API key, and a code editor.
+   - It provides detailed instructions for cloning the repository, navigating to the project directory, and running the setup scripts.
+   - It also explains how to run the site and access the AgentGPT user interface.
+
+   Changes for Your Use:
+   - Update the setup instructions if there are any changes in the project's dependencies or installation process.
+   - Customize the setup script or instructions based on your project's specific requirements or additional dependencies.
+
+   Updates:
+   - Regularly review and update the setup instructions to ensure they are accurate and up to date with the latest project changes.
+   - Include any troubleshooting tips or common issues faced during the setup process and provide solutions or workarounds.
+
+5. translations.mdx:
+   Description:
+   - This file provides a guide for translating the AgentGPT project into different languages.
+   - It explains how frontend translations are handled using i18next and the structure of translation files in the `next/public/locales` folder.
+   - It provides instructions for adding a new language to the project, including updating the i18n config, adding a new language definition, and creating translation files for each namespace.
+   - It also discusses how backend translations are handled via the model itself and the limitations of editing those translations.
+   - It provides guidelines for translating the project's README and documentation.
+
+   Changes for Your Use:
+   - If you want to support additional languages, follow the instructions to add new language translations to the project.
+   - Customize the translation process or tools based on your project's specific requirements or preferences.
+
+   Updates:
+   - Keep the translation files up to date with the latest project changes and new features.
+   - Encourage contributions from the community to improve and expand the language support.
+
+6. workflow-input.mdx:
+   Description:
+   - This file explains the input templating system used in the workflow automation feature of AgentGPT.
+   - It describes how output fields from workflow nodes are used as inputs for descendant nodes.
+   - It provides details on how the templating system works in both the frontend and backend.
+   - It explains the structure of the template key and how it is replaced with actual values during runtime.
+
+   Changes for Your Use:
+   - Customize the input templating system based on your project's specific requirements or workflow design.
+   - Update the documentation if there are any changes in the templating syntax or behavior.
+
+   Updates:
+   - Keep the input templating documentation up to date with any changes or enhancements made to the workflow automation system.
+   - Provide examples and usage guidelines to help users understand and utilize the input templating feature effectively.
+
+7. workflows.mdx:
+   Description:
+   - This file provides an overview of the workflow automation system within AgentGPT.
+   - It explains the key concepts, including workflows, nodes, edges, and blocks.
+   - It describes the relationship between frontend models (workflow, node, edge) and backend models (block).
+   - It provides instructions for adding a new block to the workflow system, including updating the frontend and backend code.
+   - It also explains the different types of nodes: triggers and actions.
+
+   Changes for Your Use:
+   - Customize the workflow automation system based on your project's specific requirements or use cases.
+   - Update the block definitions and implementations to include additional functionality or integrations.
+
+   Updates:
+   - Keep the workflow documentation up to date with any changes or additions made to the system.
+   - Provide examples and usage guidelines to help users understand and utilize the workflow automation feature effectively.
+
+README.md Considerations:
+When updating the project's README.md file, consider including the following information related to the development documentation:
+
+1. Provide an overview of the available development documentation and its purpose.
+2. Include links to the relevant documentation files (e.g., auth.mdx, memory.mdx, prompts.mdx, setup.mdx, translations.mdx, workflow-input.mdx, workflows.mdx).
+3. Encourage users to refer to the documentation for detailed information on authentication, memory management, prompting, setup instructions, translations, and workflow automation.
+4. Highlight any specific instructions or prerequisites required to understand and utilize the development features effectively.
+5. Encourage contributions to the development documentation, such as adding new guides, improving existing content, or translating the documentation into different languages.
+
+By providing clear and comprehensive development documentation, you can help users and contributors understand the internal workings of AgentGPT and enable them to extend and customize the project according to their needs.
