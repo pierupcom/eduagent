@@ -1,0 +1,34 @@
+The provided code is a GitHub Actions workflow file named "Invoke Deployment Webhooks."
+
+1. Triggers:
+   - The workflow can be triggered manually using the `workflow_dispatch` event.
+   - It also triggers automatically on push events to the "main" branch.
+
+2. Jobs:
+   - The workflow consists of a single job named "invoke."
+
+3. Job Details:
+   - The job is named "Invoke Webhooks" and runs on the latest version of Ubuntu.
+   - It uses the "production" environment.
+   - The job only runs if the repository is "reworkd/AgentGPT."
+
+4. Steps:
+   - The job contains a single step named "Trigger Webhooks."
+   - The step uses the `run` keyword to execute a shell command.
+
+5. Shell Command:
+   - The command uses `curl` to make an HTTP POST request to a webhook URL.
+   - The webhook URL is stored in the `DEPLOYMENT_WEBHOOK_URL` secret.
+   - The request includes the following headers:
+     - `Accept: application/vnd.github+json`: Specifies the expected response format as GitHub JSON.
+     - `${{ secrets.WEBHOOK_AUTHORIZATION }}`: Includes an authorization header stored in the `WEBHOOK_AUTHORIZATION` secret. This header is likely used for authentication or authorization purposes.
+     - `X-GitHub-Api-Version: 2022-11-28`: Specifies the GitHub API version to be used.
+   - The request payload is a JSON object containing the `ref` field set to "main," indicating the branch reference.
+
+The purpose of this workflow is to trigger external deployment webhooks whenever changes are pushed to the "main" branch or when the workflow is manually triggered. The webhook URL and authorization header are stored as secrets to keep them secure.
+
+When the workflow runs, it sends an HTTP POST request to the specified webhook URL with the necessary headers and payload. This request notifies the external system or service that a deployment should be triggered for the "main" branch.
+
+By using this workflow, you can automate the deployment process by triggering webhooks that can perform various deployment tasks, such as building, testing, and deploying the code to the production environment.
+
+Note: Make sure to configure the required secrets (`DEPLOYMENT_WEBHOOK_URL` and `WEBHOOK_AUTHORIZATION`) in your GitHub repository settings for this workflow to function properly.
