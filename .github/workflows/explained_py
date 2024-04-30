@@ -1,0 +1,32 @@
+Defines a set of jobs that are triggered when a pull request is made to the "main" branch, and the changes are within the `platform/` directory or its subdirectories.
+
+The workflow consists of three jobs: `black`, `mypy`, and `pytest`.
+
+1. `black` job:
+   - Runs on the latest version Ubuntu.
+   - Sets the default working directory to `platform/`.
+   - Steps:
+     - Checks out the repository code.
+     - Installs the `poetry` package manager using `pipx`.
+     - Sets up Python with the version specified in the `PYTHON_VERSION` environment variable (3.11).
+     - Installs project dependencies using `poetry install`.
+     - Runs the `black` code formatter check on the codebase.
+
+2. `mypy` job:
+   - Similar to the `black` job, but runs the `mypy` static type checker on the codebase.
+
+3. `pytest` job:
+   - Runs on the latest version of Ubuntu.
+   - Sets the default working directory to `platform/`.
+   - Defines a service named `reworkd_platform-db` using the `bitnami/mysql:8.0.30` Docker image.
+     - Configures the MySQL database with the specified environment variables.
+     - Exposes the MySQL service on port 3306.
+   - Steps:
+     - Checks out the repository code.
+     - Installs `poetry`.
+     - Sets up Python with the specified version.
+     - Installs project dependencies using `poetry install`.
+     - Runs the `pytest` testing framework with verbose output and code coverage.
+     - Sets environment variables for the tests, including database and Kafka configuration.
+
+By running these checks and tests on every pull request to the "main" branch, the workflow helps maintain code consistency, catches potential issues, and verifies the functionality of the platform project before merging the changes.
