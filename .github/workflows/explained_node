@@ -1,0 +1,23 @@
+Defines a CI (Continuous Integration) pipeline for a Next.js project.
+1. `on` section:
+   - The workflow is triggered on push events to the "main" branch and pull request events targeting the "main" branch.
+   - The `paths` filter specifies that the workflow should only run if changes are made within the `next/` directory or its subdirectories.
+
+2. `jobs` section:
+   - The workflow defines a single job named `build`.
+   - The job runs on the latest version of Ubuntu.
+
+3. `defaults` section:
+   - It sets the default working directory for all `run` steps within the job to the `next/` directory.
+
+4. `steps` section:
+   - `uses: actions/checkout@v3`: This step checks out the repository code.
+   - `name: Use Node.js 18`: This step sets up Node.js version 18.x using the `actions/setup-node@v3` action.
+     - It also enables caching of npm dependencies using the `cache` and `cache-dependency-path` options, with the `package-lock.json` file in the `next/` directory as the cache key.
+   - `run: npm ci`: This step installs the project dependencies using `npm ci`, which is faster and more deterministic than `npm install`.
+   - `run: npm test`: This step runs the test suite for the Next.js project.
+     - It sets the `OPENAI_API_KEY` environment variable to `sk-0000000000` during the test run.
+   - `run: ./prisma/useSqlite.sh && npm run postinstall`: This step runs two commands:
+     - `./prisma/useSqlite.sh`: It sets up or configures a SQLite database using Prisma.
+     - `npm run postinstall`: It runs the `postinstall` script defined in the `package.json` file.
+
